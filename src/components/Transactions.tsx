@@ -36,10 +36,10 @@ const Transactions: React.FC = () => {
     <Grid container spacing={3} sx={{ alignItems: 'center', marginTop: '50px', justifyContent: 'center' }} >
       <Typography variant="h4">Lista de transações</Typography>
       <Grid container item xs={12} sx={{ justifyContent: 'center', alignItems: 'center' }}>
-        <TextField fullWidth label='Digite uma descrição' variant='outlined' value={descricao} onChange={e => setDescricao(e.target.value)}>Descrição</TextField>
+        <TextField fullWidth type='text' label='Digite uma descrição' variant='outlined' value={descricao} onChange={e => setDescricao(e.target.value)}>Descrição</TextField>
       </Grid>
       <Grid container xs={12} item sx={{ paddingTop: '25px', justifyContent: 'center', alignItems: 'center' }}>
-        <TextField sx={{ width: '300px' }} variant='outlined' label='Digite um valor' value={value} onChange={e => setValue(Number(e.target.value))}>Valor</TextField>
+        <TextField sx={{ width: '300px' }} type='number' variant='outlined' label='Digite um valor' value={value} onChange={e => setValue(Number(e.target.value))}>Valor</TextField>
         <Box sx={{ marginRight: '15px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <Typography sx={{ margin: '10px 0px 0px 30px' }}><strong>Saldo</strong></Typography>
           <Typography sx={{ margin: '10px 0px 0px 10px', border: '1px solid #aeaaaa', padding: '5px 60px 5px', borderRadius: '6px' }} variant='body1'>{saldo}</Typography>
